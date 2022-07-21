@@ -1,0 +1,60 @@
+.gambiarra{
+    height: 100px;
+    background-color: #707070;
+
+}
+
+.header{
+    height: 330px;
+    width: 100%;
+    transform: skewY(5deg);
+    background-color: #707070;
+}
+
+.content{
+    transform: skewY(-5deg);
+    text-align: center;
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.fraseHeader{
+    padding-top: 50px;
+}
+
+
+.segundaLinha{
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.primeiraLinha{
+    font-size: 20px;
+}
+
+.sectionButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.buttons>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #888888;
+    border-radius: 4px;
+}
