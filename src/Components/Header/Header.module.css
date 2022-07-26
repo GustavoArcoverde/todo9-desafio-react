@@ -1,18 +1,22 @@
-.gambiarra{
-    height: 100px;
-    background-color: #707070;
-
-}
-
 .header{
     height: 330px;
     width: 100%;
-    transform: skewY(5deg);
     background-color: #707070;
 }
 
+.header::after{
+  content: '';
+  bottom: 10px;
+  top: 328px;
+  height: 11%;
+  transform-origin: right;
+  transform: skewY(3deg);
+  width: 100%;
+  position: absolute;
+  background-color: white;
+}
+
 .content{
-    transform: skewY(-5deg);
     text-align: center;
     color: white;
     font-family: 'Helvetica Neue', sans-serif;

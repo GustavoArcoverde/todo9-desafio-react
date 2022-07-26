@@ -3,7 +3,6 @@ import S from "./Header.module.css";
 
 const Header = () => {
   return (
-    <div className={S.gambiarra}>
       <header className={S.header}>
         <div className={S.content}>
           <section>
@@ -26,7 +25,6 @@ const Header = () => {
           </section>
         </div>
       </header>
-    </div>
   );
 };
 
