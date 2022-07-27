@@ -41,3 +41,23 @@
     border: #707070 1px solid;
     width: 16%;
 }
+
+@media (max-width: 426px){
+    .share>p{
+        width: 90%;
+        text-align: center;
+    }
+
+    .share>form{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .share>form>div{
+        width: 90%;
+    }
+
+    .share>button{
+        width: 90%;
+    }
+}

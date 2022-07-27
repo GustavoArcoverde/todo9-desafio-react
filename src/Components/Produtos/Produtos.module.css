@@ -25,3 +25,16 @@
     background-color: #FFFFFF;
     border: #707070 1px solid;
 }
+
+@media(max-width: 426px){
+    .produtos{
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+    }
+
+    .content>button{
+        width: 50%;
+    }
+}

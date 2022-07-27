@@ -26,3 +26,10 @@
 .footer>p{
     font-size: 12px;
 }
+
+@media (max-width: 426px){
+    .footer::after{
+        top: 3430px;
+        background-color: white;
+    }
+}
