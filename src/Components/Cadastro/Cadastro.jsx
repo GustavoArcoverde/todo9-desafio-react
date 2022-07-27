@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import S from "./Cadastro.module.css";
+import { cpf } from 'cpf-cnpj-validator'; 
 
 const Cadastro = () => {
+  const [inputEmail, setInputEmail] = useState('')
+  const [inputCPF, setInputCPF] = useState('')
+
+  function handleInputEmail(target){
+    setInputEmail(target.value)
+    console.log(inputEmail)
+  }
+  
+  function handleInputCPF(target){
+    setInputCPF(target.value)
+    console.log(inputCPF)
+  }
+
+  function validaEmail(){
+    if(inputEmail.indexOf('@') > 2 && inputEmail.indexOf('.com') > inputEmail.indexOf('@')){
+      alert("Email Válido")
+    }else{
+      alert("Email Inválido")
+    }
+  }
+
+  function validaCPF(){
+    if(cpf.isValid(inputCPF) == true){
+      alert("CPF Válido")
+    }else{
+      alert("CPF Inválido")
+    }
+  }
+
   return (
     <section className={S.cadastro}>
       <div className={S.text}>
@@ -15,16 +45,20 @@ const Cadastro = () => {
         <label>Seu nome:</label>
         <input type="text" />
         <label>E-mail:</label>
-        <input type="email" />
+        <input type="email" value={inputEmail} onChange={({target})=>handleInputEmail(target)}/>
         <label>CPF:</label>
-        <input type="text" />
+        <input type="text" value={inputCPF} onChange={({target})=>handleInputCPF(target)}/>
         <div className={S.radioInput}>
           <input type="radio" name='genero' value="masculino"/>
           <label htmlFor="Masculino">Masculino</label>
           <input type="radio" name='genero' value="feminino"/>
           <label htmlFor="feminino">Feminino</label>
         </div>
-        <button>Enviar</button>
+        <button onClick={(event)=>{
+          event.preventDefault()
+          validaEmail()
+          validaCPF()
+          }}>Enviar</button>
       </form>
     </section>
   );
