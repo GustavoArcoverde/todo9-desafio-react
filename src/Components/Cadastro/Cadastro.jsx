@@ -24,8 +24,11 @@ const Cadastro = () => {
     }
   }
 
+  // cpf.isValid(1111111111)
+  // true ou false
+
   function validaCPF(){
-    if(cpf.isValid(inputCPF) == true){
+    if(cpf.isValid(inputCPF)){
       alert("CPF Válido")
     }else{
       alert("CPF Inválido")
